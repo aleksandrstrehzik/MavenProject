@@ -1,0 +1,22 @@
+create table person
+(
+    id             int auto_increment
+        primary key,
+    age            int          null,
+    salary         dec          not null,
+    passport       char(10)     not null,
+    address        varchar(200) not null,
+    dateOfBirthday date         not null,
+    dateTimeCreate datetime     null,
+    timeToLunch    time         null,
+    letter         text         not null,
+    constraint person1_id_uindex
+        unique (id)
+);
+insert into people.person1 (age, salary, passport, address, dateOfBirthday,dateTimeCreate, timeToLunch, letter) values ( 22, 3500.55, 'MP3013923', ' Iana Chechota 9, 58','1999-11-11', NOW(),'13:00:00','большой текст');
+insert into people.person1 (age, salary, passport, address, dateOfBirthday,dateTimeCreate, timeToLunch, letter) values ( 24, 2500.5, 'MP5164521', ' Komsomolskaia 2, 44','1997-09-05', NOW(),'13:00:00','большой текст');
+insert into people.person1 (age, salary, passport, address, dateOfBirthday,dateTimeCreate, timeToLunch, letter) values ( 51, 2000.3, 'MP5964561', ' Kosmonavtov 34, 98','1971-03-28', NOW(),'13:00:00','большой текст');
+insert into people.person1 (age, salary, passport, address, dateOfBirthday,dateTimeCreate, timeToLunch, letter) values ( 15, 0, 'MP4121461', ' Bogdanovicha','2006-10-12', NOW(),'13:00:00','большой текст');
+insert into people.person1 (age, salary, passport, address, dateOfBirthday,dateTimeCreate, timeToLunch, letter) values ( 51, 1500, 'MP5164521', ' Cehova 4, 56','1971-10-17', NOW(),'13:00:00','большой текст');
+
+select * from people.person1 where age > 21 order by dateTimeCreate DESC ;
